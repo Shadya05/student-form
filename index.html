@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<HTML>
+<HEAD>
+    <Title>Form for students</Title>
+    <link rel="stylesheet" href="style.css">
+    <h1 id="h1">STUDENT FORM</h1>
+    
+</HEAD>
+<body >
+    <div class="center">
+    <table border="2%" class="table">
+        <tr>
+            <th id="na">Name</th>
+            <th><input id="name" type="text"></th>
+        </tr>
+        <tr>
+            <th id="na">Age</th>
+            <th><input id="age" type="number"></th>
+        </tr>
+        <tr>
+            <th id="na">Gender</th>
+            <th><input type="radio", name="gen", value="Male">Male
+                <input type="radio", name="gen", value="Female">Female
+            </th>
+        </tr>
+        <tr>
+            <th id="na">Course</th>
+            <th>
+            <label>
+                <select id="courseSelect">
+            <option value="html">HTML</option>
+            <option value="css">Cascading style sheets</option>
+            <option value="javascript">Javascript</option>
+            </select>
+            </label>
+            </th>
+        </tr>
+        <tr>
+            <th id="na">Email</th>
+            <th><input type="email" id="email"></th>
+        </tr>
+        <tr>  
+            <th colspan="2"><button id="btn" onclick="save()" title="Save to details">Save</button>
+            </th>
+            </tr>
+        
+
+        
+        
+
+    </table>
+</div>
+    <br> <br>
+    <h2 id="sd">Saved Details:</h2>
+    <div class="center">
+    <table border="1" id="dataTable">
+        <tr>
+            <th>NAME</th>
+            <th>AGE</th>
+            <th>COURSE</th>
+            <th>GENDER</th>
+            <th>EMAIL</th>
+            <th>ACTION</th>
+        </tr>
+    </table>
+    </div>
+</body>
+<script>
+    document.getElementById("btn").addEventListener("click",
+        function save(){
+            var name = document.getElementById("name").value ;
+            var age = document.getElementById("age").value;
+            var email = document.getElementById("email").value;
+            var course = document.getElementById("courseSelect").value;
+            var gender = document.querySelector('input[name="gen"]:checked');
+
+            if(!name || !age || !email || !gender){
+                alert("please fill out all the fields");
+                return
+            }
+            gender = gender.value;
+
+            var table = document.getElementById("dataTable");
+            var row = table.insertRow();
+
+            row.insertCell(0).textContent = name;
+            row.insertCell(1).textContent = age;
+            row.insertCell(2).textContent = course;
+            row.insertCell(3).textContent = gender;
+            row.insertCell(4).textContent = email;
+
+            var actionCell = row.insertCell(5);
+            var delBtn = document.createElement("button");
+            delBtn.textContent = "delete";
+            delBtn.style.background = "tan";
+            delBtn.className = "delbtn"; 
+            delBtn.style.color = "blue";
+            delBtn.title = "Delete from details";
+            delBtn.onclick = function(){
+                table.deleteRow(row.rowIndex)
+            }
+            actionCell.appendChild(delBtn)
+
+            document.getElementById("name").value=""
+            document.getElementById("age").value=""
+            document.getElementById("email").value=""
+            document.querySelector('input[name="gen"]').forEach(el => el.checked = false)
+            document.getElementById("courseSelect").selectedIndex= 0
+        })
+</script>
+</HTML>
+
