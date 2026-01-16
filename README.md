@@ -1,9 +1,9 @@
-##Student Data Management Form
+## Student Data Management Form
 
 A simple yet functional Student Data Management Form developed using HTML, CSS, and JavaScript.
 This project demonstrates core front-end concepts such as form handling, DOM manipulation, and basic data management using the browser’s local state (in-memory arrays or localStorage).
 
-##Project Overview
+## Project Overview
 
 The Student Data Management Form is a web-based application that allows users to manage student information through an interactive form interface.
 
@@ -15,7 +15,7 @@ Users can input student details and perform the following operations:
 
 All data is processed on the client side and dynamically updated on the webpage without requiring a page reload.
 
-##Objectives of the Project
+## Objectives of the Project
 
 - To understand how HTML forms collect user input
 - To practice JavaScript event handling and DOM manipulation
@@ -30,7 +30,7 @@ All data is processed on the client side and dynamically updated on the webpage 
 - Delete functionality for individual records
 - Instant UI updates without page refresh
 
-##Technologies Used
+## Technologies Used
 
 HTML5 – Defines the structure and layout of the form and page
 
@@ -38,7 +38,7 @@ CSS3 – Provides styling for a clean and readable interface
 
 JavaScript (ES6) – Handles logic, events, and dynamic updates
 
-##How the Application Works
+## How the Application Works
 
 1.The user enters student information into the form fields.
 2.When the Add Student button is clicked:
@@ -48,7 +48,7 @@ JavaScript (ES6) – Handles logic, events, and dynamic updates
 6. Each student record includes a Delete option.
 7. Clicking Delete removes the selected student record and updates the display instantly.
 
-##Data Handling
+## Data Handling
 
 - Student data is stored locally within the browser.
 - Depending on implementation:
@@ -65,7 +65,7 @@ Student-Data-Management-Form/
 ├── script.js       # JavaScript logic and DOM manipulation
 └── README.md       # Project documentation
 
-Setup Instructions
+## Setup Instructions
 
 1. Download or clone the project repository.
 2. Open the project folder.
@@ -73,7 +73,7 @@ Setup Instructions
 
 No additional setup or installations are required.
 
-##Usage Instructions
+## Usage Instructions
 
 - Fill in the required student details in the form.
 - Click the Add button to store the student record.
@@ -89,7 +89,7 @@ Through this project, users gain hands-on experience with:
 - Basic data management techniques
 - Front-end project structuring
 
-##Future Enhancements
+## Future Enhancements
 
 - Edit and update student records
 - Input validation and error handling
@@ -97,7 +97,7 @@ Through this project, users gain hands-on experience with:
 - Persistent storage using databases
 - Responsive design improvements
 
-##Conclusion
+## Conclusion
 
 The Student Data Management Form is a beginner-friendly project that helps build a strong foundation in front-end web development. It demonstrates how simple web technologies can be combined to create an interactive and functional application.
 
