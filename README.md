@@ -17,6 +17,4 @@ The data is dynamically rendered on the page using DOM manipulation.
 
 ---
 
-##  Demo Screenshot
 
-*(Optional — add a screenshot here)*
